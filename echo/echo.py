@@ -1,7 +1,7 @@
 from redbot.core import commands
 
-class TestCog(commands.Cog):
-    """test_cog"""
+class Echo(commands.Cog):
+    """echo"""
 
     def __init__(self, bot):
         self.bot = bot
