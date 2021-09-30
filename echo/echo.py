@@ -7,7 +7,7 @@ class Echo(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def b.echo(self, ctx, *, text):
+    async def echo(self, ctx, *, text):
         """This does more stuff!"""
         await ctx.message.delete()
         await ctx.send(text)
