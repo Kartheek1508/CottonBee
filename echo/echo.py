@@ -7,7 +7,7 @@ class Echo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.group(invoke_without_command=True)    
     async def echo(self, ctx, *, text):
         "Echo what you said (only for admins)"
         await ctx.message.delete()
@@ -16,3 +16,11 @@ class Echo(commands.Cog):
         else:
             response = f"{text}  - <@{ctx.author.id}>"
         await ctx.send(response, allowed_mentions=discord.AllowedMentions.none())        
+
+
+    @echo.command()
+    @checks.admin()
+    async def embed(self, ctx, *, text):
+        """Embed echo"""
+        await ctx.message.delete()
+        await ctx.send(embed=discord.Embed(description=text))
