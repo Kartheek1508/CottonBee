@@ -9,7 +9,7 @@ class Echo(commands.Cog):
 
     @commands.group(invoke_without_command=True)    
     async def echo(self, ctx, *, text):
-        "Echo what you said (only for admins)"
+        "Echo what you said"
         await ctx.message.delete()
         if await self.bot.is_admin(ctx.author):
             response = text
