@@ -1,7 +1,6 @@
- { 
-     "author": ["Kartheek"],
-    "install_msg": "Thank you for installing",
-    "name": "CottonBee",
-    "short": "Red V3 Cog",
-    "description": "Cogs by Kartheek"
- }
+{
+	"author": ["Kartheek"],
+	"name": "Echo",
+	"short": "Echoes what you type",
+	"description": "Echoes what you type"
+}
