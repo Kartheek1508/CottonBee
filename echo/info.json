@@ -1,7 +1,6 @@
 {
 	"author": ["Kartheek"],
-	"install_msg": "Thank you for installing",
-	"name": "CottonBee",
-	"short": "Cogs by Kartheek",
-	"description": "Cogs by Kartheek"
+	"name": "Echo",
+	"short": "Echoes what you type",
+	"description": "Echoes what you type"
 }
