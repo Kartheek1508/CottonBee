@@ -10,7 +10,8 @@ class Echo(commands.Cog):
     @commands.group(invoke_without_command=True)    
     async def echo(self, ctx, *, text):
         "Echo what you said"
-        await ctx.message.delete()
+        if ctx.channel.permissions_for(ctx.guild.me).manage_messages:
+             await ctx.message.delete()        
         if await self.bot.is_admin(ctx.author):
             response = text
         else:
