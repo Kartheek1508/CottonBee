@@ -23,5 +23,7 @@ class Echo(commands.Cog):
     @checks.admin()
     async def embed(self, ctx, *, text):
         """Embed echo"""
-        await ctx.message.delete()
+    if ctx.channel.permissions_for(ctx.guild.me).manage_messages:
+         await ctx.message.delete()
+             
         await ctx.send(embed=discord.Embed(description=text))
