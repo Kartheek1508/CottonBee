@@ -19,7 +19,7 @@ class Echo(commands.Cog):
         await ctx.send(response, allowed_mentions=discord.AllowedMentions.none())        
 
 
-     @echo.command()
+    @echo.command()
     @checks.admin()
     async def embed(self, ctx, *, text):
         """Embed echo"""
