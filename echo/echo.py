@@ -26,4 +26,19 @@ class Echo(commands.Cog):
         if ctx.channel.permissions_for(ctx.guild.me).manage_messages:
          await ctx.message.delete()
              
-         await ctx.send(embed=discord.Embed(description=text))
+         await ctx.send(embed=discord.Embed(description=text)) 
+
+    @echo.command()
+    @checks.admin()
+    async def bold(self, ctx, *, text):
+        """bold"""
+        await ctx.message.delete()  
+        await ctx.send (f"**{text}**")
+
+
+    @echo.command()
+    @checks.admin()
+    async def italic(self, ctx, *, text):
+        """italic"""
+        await ctx.message.delete()  
+        await ctx.send (f"*{text}*")
