@@ -27,3 +27,19 @@ class Echo(commands.Cog):
             await ctx.message.delete()
              
         await ctx.send(embed=discord.Embed(description=text))
+    
+    @echo.command()
+    @checks.admin()
+    async def embed(self, ctx, *, text):
+        """bold echo"""
+        await ctx.message.delete()
+             
+        await ctx.send (f"'**{(text)}**'")
+
+    @echo.command()
+    @checks.admin()
+    async def embed(self, ctx, *, text):
+        """italic echo"""
+        await ctx.message.delete()
+             
+        await ctx.send (f"'*{(text)}*'")
