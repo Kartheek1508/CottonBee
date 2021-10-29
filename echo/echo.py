@@ -1,3 +1,4 @@
+from discord.embeds import Embed
 from redbot.core import commands, checks
 import discord 
 
@@ -30,16 +31,16 @@ class Echo(commands.Cog):
     
     @echo.command()
     @checks.admin()
-    async def embed(self, ctx, *, text):
-        """bold echo"""
+    async def bold(self, ctx, *, text):
+        """Bold echo"""
         await ctx.message.delete()
              
-        await ctx.send (f"'**{(text)}**'")
+        await ctx.send (f"**{(text)}**")
 
     @echo.command()
     @checks.admin()
-    async def embed(self, ctx, *, text):
-        """italic echo"""
+    async def italic(self, ctx, *, text):
+        """Italic echo"""
         await ctx.message.delete()
              
-        await ctx.send (f"'*{(text)}*'")
+        await ctx.send (f"*{(text)}*")
