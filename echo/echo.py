@@ -34,8 +34,7 @@ class Echo(commands.Cog):
     async def bold(self, ctx, *, text):
         """Bold echo"""
         await ctx.message.delete()
-             
-        await ctx.send (f"**{(text)}**")
+        await ctx.send(f"**{(text)}**")
 
     @echo.command()
     @checks.admin()
@@ -43,4 +42,4 @@ class Echo(commands.Cog):
         """Italic echo"""
         await ctx.message.delete()
              
-        await ctx.send (f"*{(text)}*")
+        await ctx.send(f"*{(text)}*")
